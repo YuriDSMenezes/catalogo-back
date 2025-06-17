@@ -1,0 +1,16 @@
+version: '3.7'
+services:
+  postgres:
+    image: postgres:latest
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: paraibas
+      POSTGRES_PASSWORD: paraiba123
+      POSTGRES_DB: catalogo_online_postgres
+    volumes:
+      - postgres_data:/postgresql
+
+volumes:
+  postgres_data:
+  redis_data:
